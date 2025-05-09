@@ -1,0 +1,36 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.integrate as intgr
+
+def equations(x, t, r, f, g, d):
+    #inputs:
+    #x: array, all variables stacked into an array.
+    #t: float, time (need to have the argument `t` even if the equations do not depend on time explicitly).
+    #r, f, g, d: other parameters used in the equations.
+    
+    X, Y = x    # parse variables
+    dXdt = r * X - f * X * Y
+    dYdt = g * X * Y - d * Y
+    return [dXdt, dYdt]    
+
+r = 5    # growth rate of the prey
+f = r    # feeding rate of the predator
+g = 1    # growth rate of the predator per prey available
+d = 1    # death rate of the predator
+
+T = 10.    # total time to solve the equations for
+time = np.arange(0, T, 0.01)    # time points to evaluate the solutions at
+X0, Y0 = np.random.rand(2)    # random initial values between 0 and 1
+
+sol = intgr.odeint(equations, [X0, Y0], time, args=(r,f,g,d))    # solve ODE
+
+Xt = sol[:,0]
+Yt = sol[:,1]
+
+plt.figure()
+plt.plot(time, Xt, label='X')
+plt.plot(time, Yt, label='Y')
+plt.xlabel('time')
+plt.ylabel('solutions')
+plt.legend(loc='upper right')
+plt.show()
