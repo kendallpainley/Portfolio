@@ -1,2 +1,6 @@
 # Portfolio
 Portfolio of projects showcasing my programming skills
+
+My Python programming skills are deeply interconnected with physics and numerical computation, serving as essential tools for modeling, simulation, and data analysis. Through Python, I can develop algorithms to solve complex differential equations governing physical systems, such as simulating particle dynamics or electromagnetic fields. Libraries, like NumPy and SciPy, enable numerical calculations and data processing, allowing me to analyze experimental results or approximate solutions where analytical methods are unreasonable. Moreover, Python's visualization capabilities with tools like Matplotlib enable graphical representation of calculations. Overall, my experience in Python enhances my ability to perform precise, scalable, and innovative computational experiments in physics.
+
+As a beginner in machine learning, I am in the early stages of understanding the fundamental concepts and techniques involved in building models. I have started exploring basic algorithms such as linear regression and decision trees, and I am learning how to preprocess data, select relevant features, and evaluate model performance. While my skills are still developing, I am gradually gaining confidence in creating simple machine learning models and applying them to small datasets.
